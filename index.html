@@ -33,7 +33,7 @@
         <nav class="nav">
         <ul class="nav-list list">
           <li class="nav-list-item">
-            <a class="nav-list-link" href="./index.html">Студія</a>
+            <a class="nav-list-link current" href="./index.html">Студія</a>
           </li>
           <li class="nav-list-item">
             <a class="link" href="./portfolio.html">Портфоліо</a>
@@ -71,7 +71,8 @@
       <section class="section hero">
         <div class="container">
           <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="section-button" type="button">Замовити послугу</button>
+          <button class="section-button" type="button"
+          data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- Особливості -->
@@ -136,29 +137,40 @@
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="activity-list list">
           <li class="activity-item">
+            <div class="activity-thumb">
             <img class="img"
               src="./images/box-1.jpg"
               alt="Web розробка"
               width="370"
-              height="294"
-            />
+              height="294"/>
+            <div class="overlay">
+              <h2 class="overley-titel">Десктопні додатки</h2>
+            </div>
+          </div>
           </li>
           <li class="activity-item">
+            <div class="activity-thumb">
             <img class="img"
               src="./images/box-2.jpg"
               alt="Розробка додатків"
               width="370"
-              height="294"
-            />
-            <li></li>
+              height="294"/>
+            <div class="overlay">
+              <h2 class="overley-titel">Мобільні додатки</h2>
+            </div>
+          </div>
+            </li>
             <li class="activity-item">
+              <div class="activity-thumb">
               <img class="img"
                 src="./images/box-3.jpg"
                 alt="Розробка дизайну"
                 width="370"
-                height="294"
-              />
-            </li>
+                height="294"/>
+              <div class="overlay">
+                <h2 class="overley-titel">Дизайнерські рішення</h2>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -541,5 +553,17 @@
 </div>
 </div>
   </footer>
+<!-- modal window-->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal-btn" type="button" data-modal-close>
+      <svg width="18px" height="18px">
+      <use href="./images/icons/modal/modal-icon.svg#btn-modals-close-black"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script src="./js/modal.js"></script>
   </body>
 </html>
