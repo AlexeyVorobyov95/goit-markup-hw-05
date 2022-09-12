@@ -503,9 +503,10 @@ text-transform: uppercase;
 background-color: rgba(47, 48, 58, 0.8);
 }
 
-.overley-titel {
+.overlay-titel {
 color: var(--auxiliary-text-colar);
-
+font-size: 14px;
+line-height: 16px;
 }
 
 
@@ -621,6 +622,7 @@ height: 100%;
 
 background-color: rgba(33, 150, 243, 0.9);
 
+transition-property: transform;
 transform: translateY(100%);
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -634,11 +636,6 @@ color: var(--auxiliary-text-colar);
 
 .works-img :hover .works-overlay {
     transform: translateY(0);
-}
-
-.socials-link:hover {
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px 
-rgba(0, 0, 0, 0.16);
 }
 
 .visually-hidden {
@@ -662,11 +659,15 @@ position: fixed;
 top: 0; 
 left: 0;
 
+opacity: 1;
 z-index: 1000;
 
 width: 100%;
 height: 100%;
 background-color: rgba(0, 0, 0, 0.2);
+
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
